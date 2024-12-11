@@ -94,6 +94,7 @@ jobs:
           sudo -E apt -yqq clean
           sudo -E apt -yqq install dos2unix libfuse-dev
           sudo bash -c 'bash <(curl -sL https://build-scripts.immortalwrt.org/init_build_environment.sh)'
+          sudo -E apt -yqq install clang-13
           sudo -E systemctl daemon-reload
           sudo -E timedatectl set-timezone "Asia/Shanghai"
 
@@ -229,6 +230,8 @@ jobs:
             这是个平台固件包，内含多个设备！
             请注意选择你需要的设备固件！
             不要问，刷就完事了！
+
+            京东云亚瑟 AX1800 Pro DAED 12M内核固件
 
             全系带开源硬件加速，别问了！
 
