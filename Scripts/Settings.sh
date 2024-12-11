@@ -37,6 +37,15 @@ echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config
 
+
+#修改默认时区
+sed -i "s/timezone='.*'/timezone='Asia\/Shanghai'/g" $CFG_FILE
+#修改UPnP 菜单名
+sed -i "s/UPnP IGD & PCP\/NAT-PMP/UPnP/g" feeds/luci/applications/luci-app-upnp/root/usr/share/luci/menu.d/luci-app-upnp.json
+#修改jdc ax1800 pro 的内核大小为12M
+sed -i "/^define Device\/jdcloud_re-ss-01/,/^endef/ { /KERNEL_SIZE := 6144k/s//KERNEL_SIZE := 12288k/ }" target/linux/qualcommax/image/ipq60xx.mk
+
+
 #手动调整的插件
 if [ -n "$WRT_PACKAGE" ]; then
 	echo "$WRT_PACKAGE" >> ./.config
