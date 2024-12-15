@@ -83,4 +83,4 @@ UPDATE_VERSION "sing-box"
 UPDATE_VERSION "tailscale"
 
 #下载daed-next
-git clone https://github.com/sbwml/luci-app-daed-next package/daed-next
+# git clone https://github.com/sbwml/luci-app-daed-next package/daed-next
