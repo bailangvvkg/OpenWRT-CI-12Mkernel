@@ -2,7 +2,7 @@
 CONFIG_PACKAGE_luci-app-homeproxy=y
 CONFIG_PACKAGE_luci-app-mihomo=y
 CONFIG_PACKAGE_luci-app-daed=y
-#CONFIG_PACKAGE_luci-app-daed-next=y
+CONFIG_PACKAGE_luci-app-daed-next=y
 #增加插件
 CONFIG_PACKAGE_luci-app-samba4=y
 CONFIG_PACKAGE_luci-app-cpufreq=y
