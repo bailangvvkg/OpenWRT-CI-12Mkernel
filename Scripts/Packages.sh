@@ -78,9 +78,12 @@ UPDATE_VERSION() {
 	done
 }
 
-#UPDATE_VERSION "软件包名" "测试版，true，可选，默认为否"
+# UPDATE_VERSION "软件包名" "测试版，true，可选，默认为否"
 UPDATE_VERSION "sing-box"
 UPDATE_VERSION "tailscale"
 
-#下载daed-next
+# 下载daed-next
 git clone https://github.com/sbwml/luci-app-daed-next package/daed-next
+
+# 拉取Lucky最新版的源码
+git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
